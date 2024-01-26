@@ -1,13 +1,204 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  html{
+  scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: 'oldE';
+    src: url(../old-english-five-font/OldEnglishFive-axyVg.ttf);
+  }
+  @font-face {
+    font-family: 'poppins',sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,500);
+  }
+
+  @font-face {
+    font-family: 'tnr';
+    src: url(./times.ttf);
+  }
+
+body{
+  height: 100%;
+}
+#table1 thead tr th{
+    border: black 1px solid;
+}
+#table1 tbody tr td{
+  border: black 1px solid
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-animate {
+  background-size: 400%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+
+
+table, th,tbody,tr, td {
+  border-collapse: collapse;
+}
+
+
+.textS{
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+}
+.textSh{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.dark{
+  background-color: black;
+  color: white;
+}
+.bg{
+  background-image: url('Picture/loginBG2.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  margin: 0;
+}
+
+.glass-cardS{
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+
+.events {
+  font-size: 12px;
+}
+
+
+::-webkit-scrollbar{
+  height: 8px;
+  width: 3px;
+  position: fixed;
+  z-index: 50;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  z-index: 50;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0);
+  width: 1px;
+  opacity: 0.5;
+  border-radius:10px;
+  z-index: 50;
+}
+::-webkit-scrollbar-thumb:hover{
+  z-index: 50;
+}
+.activePage{
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+.glass{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: -0px 5px 2px 0 rgba(0, 0, 0, 0.37);
+  animation: referralBTN 4s linear alternate infinite;
+  background-size: 500px;
+}
+.glass:active{
+  box-shadow: -0px 1px 2px 0 rgba(0, 0, 0, 0.37);
+}
+@keyframes referralBTN {
+  from{
+    background-position-x: 0;
+  }
+  to{
+    background-position-x: 500px;
+  }
+ 
+}
+
+
+
+
+.border1{
+  /* box-shadow: -5px 5px #F6F1F1 , -10px 10px 2px 0 rgba(0, 0, 0, 0.37) */
+  border-radius: 32% 59% 49% 34% / 59% 48% 36% 29%;
+  border:2px solid #F6F1F1;
+  animation: borders 8s alternate infinite;
+}
+
+@keyframes borders {
+    25% {
+      border-radius: 72% 21% 18% 75% / 57% 10% 79% 33%;
+    }
+    50%{
+      border-radius: 77% 15% 29% 58% / 41% 54% 37% 51%;
+    }
+    75%{
+      border-radius: 78% 21% 54% 35% / 22% 70% 19% 78%;
+    }
+    100%{
+      border-radius: 32% 59% 49% 34% / 59% 48% 36% 29%;
+    }
+   
+}
+
+
+
+.pis{
+  box-shadow: -5px 5px #F6F1F1 , -10px 10px 2px 0 rgba(0, 0, 0, 0.37)
+}
+
+
+
+.boxShadow{
+    box-shadow: 0px 0px 20px -12px black;
+}
+
+
+
+
+
+.cardTitles {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.title
+{
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.titleContent{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
